@@ -1,0 +1,286 @@
+<!-- 13 - Kimel Project -->
+<section id="kimel" class="w-full flex flex-col gap-8 bg-black py-[60px] px-20">
+
+  <!-- Top: Text + Features -->
+  <div class="flex items-center gap-8 w-full">
+    <div class="flex-1 flex flex-col gap-8">
+      <!-- Left Column -->
+      <div class="flex flex-col gap-4">
+        <!-- Badge -->
+        <div class="flex items-center gap-2 rounded-full px-3.5 py-1.5 w-fit" style="background: #22C55E15;">
+          <div class="w-2 h-2 rounded-full bg-[#22C55E]"></div>
+          <span class="font-geist-mono text-[11px] font-semibold text-[#22C55E] tracking-[1.5px]">PROYECTO REAL</span>
+        </div>
+        <!-- Title -->
+        <span class="font-syne text-4xl font-bold gradient-text-accent">Kimel</span>
+        <p class="font-geist text-[15px] text-[#A1A1AA]">Plataforma educativa inteligente para colegios chilenos</p>
+        <p class="font-geist text-sm text-[#A1A1AA] leading-[1.5]">Kimel permite a profesores crear evaluaciones con IA, clasificadas por Taxonomía de Bloom. Los alumnos responden y ven su desempeño en tiempo real. El dashboard del profesor muestra métricas clave, gestión de cursos y alertas inteligentes.</p>
+      </div>
+      <!-- Right Column: Features + Stack -->
+      <div class="flex flex-col gap-8">
+        <!-- Features -->
+        <div class="flex flex-col gap-2.5">
+          <div class="flex items-center gap-2.5">
+            <span class="font-geist text-sm text-[#7C3AED]">✦</span>
+            <span class="font-geist text-[15px] text-[#E4E4E7]">Dashboard de monitoreo en vivo</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <span class="font-geist text-sm text-[#7C3AED]">✦</span>
+            <span class="font-geist text-[15px] text-[#E4E4E7]">Roles profesor/alumno con auth JWT</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <span class="font-geist text-sm text-[#7C3AED]">✦</span>
+            <span class="font-geist text-[15px] text-[#E4E4E7]">Sistema de calificación chileno (≥4.0)</span>
+          </div>
+        </div>
+        <!-- Stack -->
+        <div class="flex flex-wrap gap-1.5">
+          <span class="font-geist-mono text-[11px] text-[#A1A1AA] rounded-md px-2.5 py-1 bg-[#1A1A1A] border border-[#FFFFFF0F]">Django REST</span>
+          <span class="font-geist-mono text-[11px] text-[#A1A1AA] rounded-md px-2.5 py-1 bg-[#1A1A1A] border border-[#FFFFFF0F]">React</span>
+          <span class="font-geist-mono text-[11px] text-[#A1A1AA] rounded-md px-2.5 py-1 bg-[#1A1A1A] border border-[#FFFFFF0F]">Vite</span>
+          <span class="font-geist-mono text-[11px] text-[#A1A1AA] rounded-md px-2.5 py-1 bg-[#1A1A1A] border border-[#FFFFFF0F]">JWT</span>
+          <span class="font-geist-mono text-[11px] text-[#A1A1AA] rounded-md px-2.5 py-1 bg-[#1A1A1A] border border-[#FFFFFF0F]">PostgreSQL</span>
+          <span class="font-geist-mono text-[11px] text-[#A1A1AA] rounded-md px-2.5 py-1 bg-[#1A1A1A] border border-[#FFFFFF0F]">Tailwind</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard Mockup -->
+  <div class="flex w-full rounded-xl border border-[#E5E7EB] overflow-hidden" style="box-shadow: 0 8px 40px -8px #00000015; height: 780px;">
+
+    <!-- Sidebar -->
+    <div class="w-[260px] flex-shrink-0 flex flex-col justify-between py-5 px-4 bg-[#FEFCF8] border-r border-[#E5E7EB]">
+      <!-- Top -->
+      <div class="flex flex-col gap-5">
+        <!-- Logo -->
+        <div class="flex flex-col gap-0.5">
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[28px] font-bold text-[#F07A1A]">Kimel</span>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[11px] text-[#6B7280]">Plataforma Educativa</span>
+        </div>
+        <!-- Notifications -->
+        <div class="flex items-center gap-2">
+          <div class="relative w-6 h-6">
+            <i data-lucide="bell" class="w-5 h-5 text-[#6B7280] absolute top-0.5 left-0"></i>
+            <div class="absolute -top-0.5 left-3 w-4 h-4 rounded-full bg-[#EF4444] flex items-center justify-center">
+              <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[9px] font-bold text-white">3</span>
+            </div>
+          </div>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[13px] text-[#6B7280]">Notificaciones</span>
+        </div>
+        <!-- Navigation -->
+        <nav class="flex flex-col gap-1">
+          <a href="#" class="flex items-center gap-2.5 rounded-xl px-3.5 py-2.5 bg-[#FFF0DE]">
+            <i data-lucide="layout-dashboard" class="w-5 h-5 text-[#F07A1A]"></i>
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[13px] font-semibold text-[#F07A1A]">Dashboard</span>
+          </a>
+          <a href="#" class="flex items-center gap-2.5 rounded-xl px-3.5 py-2.5">
+            <i data-lucide="file-plus" class="w-5 h-5 text-[#4B5563]"></i>
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[13px] font-medium text-[#4B5563]">Crear Guía</span>
+          </a>
+          <a href="#" class="flex items-center gap-2.5 rounded-xl px-3.5 py-2.5">
+            <i data-lucide="upload" class="w-5 h-5 text-[#4B5563]"></i>
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[13px] font-medium text-[#4B5563]">Subir Respuestas</span>
+          </a>
+          <a href="#" class="flex items-center gap-2.5 rounded-xl px-3.5 py-2.5">
+            <i data-lucide="chart-column" class="w-5 h-5 text-[#4B5563]"></i>
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[13px] font-medium text-[#4B5563]">Resultados</span>
+          </a>
+          <a href="#" class="flex items-center gap-2.5 rounded-xl px-3.5 py-2.5">
+            <i data-lucide="pen-line" class="w-5 h-5 text-[#4B5563]"></i>
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[13px] font-medium text-[#4B5563]">Banco de Preguntas</span>
+          </a>
+          <a href="#" class="flex items-center gap-2.5 rounded-xl px-3.5 py-2.5">
+            <i data-lucide="settings" class="w-5 h-5 text-[#4B5563]"></i>
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[13px] font-medium text-[#4B5563]">Configuración</span>
+          </a>
+        </nav>
+      </div>
+      <!-- Bottom -->
+      <div class="flex flex-col gap-4">
+        <div class="w-full h-px bg-[#E5E7EB]"></div>
+        <!-- Profile -->
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-full bg-[#F07A1A] flex items-center justify-center">
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-sm font-bold text-white">P</span>
+          </div>
+          <div class="flex flex-col gap-px">
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[13px] font-semibold text-[#1C1C28]">Prof. García</span>
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[11px] text-[#6B7280]">Colegio San José</span>
+          </div>
+        </div>
+        <!-- Logout -->
+        <div class="flex items-center gap-1.5">
+          <i data-lucide="log-out" class="w-3.5 h-3.5 text-[#6B7280]"></i>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-xs text-[#6B7280]">Cerrar Sesión</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col gap-4 py-5 px-6 bg-[#FDFAF6] overflow-hidden">
+      <!-- Header -->
+      <div class="flex flex-col gap-1">
+        <h2 style="font-family: 'IBM Plex Sans', sans-serif;" class="text-2xl font-bold text-[#1C1C28]">Buenos días, Prof. García</h2>
+        <p style="font-family: 'IBM Plex Sans', sans-serif;" class="text-sm text-[#6B7280]">Aquí tienes un resumen de tu actividad</p>
+      </div>
+
+      <!-- Metrics Row -->
+      <div class="flex gap-4 w-full">
+        <!-- Card 1 -->
+        <div class="flex-1 flex flex-col gap-3 rounded-2xl bg-[#EFF6FF] p-5">
+          <div class="w-10 h-10 rounded-full bg-[#DBEAFE] flex items-center justify-center">
+            <i data-lucide="users" class="w-5 h-5 text-[#3B82F6]"></i>
+          </div>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-2xl font-bold text-[#1C1C28]">148</span>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-xs text-[#6B7280]">Alumnos Activos</span>
+        </div>
+        <!-- Card 2 -->
+        <div class="flex-1 flex flex-col gap-3 rounded-2xl bg-[#F0FDF4] p-5">
+          <div class="w-10 h-10 rounded-full bg-[#DCFCE7] flex items-center justify-center">
+            <i data-lucide="file-text" class="w-5 h-5 text-[#16A34A]"></i>
+          </div>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-2xl font-bold text-[#1C1C28]">12</span>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-xs text-[#6B7280]">Guías Creadas</span>
+        </div>
+        <!-- Card 3 -->
+        <div class="flex-1 flex flex-col gap-3 rounded-2xl bg-[#FFF3E8] p-5">
+          <div class="w-10 h-10 rounded-full bg-[#FFEDD5] flex items-center justify-center">
+            <i data-lucide="trending-up" class="w-5 h-5 text-[#F07A1A]"></i>
+          </div>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-2xl font-bold text-[#1C1C28]">5.2</span>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-xs text-[#6B7280]">Promedio General</span>
+        </div>
+        <!-- Card 4 -->
+        <div class="flex-1 flex flex-col gap-3 rounded-2xl bg-[#F0FDF4] p-5">
+          <div class="w-10 h-10 rounded-full bg-[#DCFCE7] flex items-center justify-center">
+            <i data-lucide="circle-check" class="w-5 h-5 text-[#16A34A]"></i>
+          </div>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-2xl font-bold text-[#1C1C28]">73%</span>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-xs text-[#6B7280]">Tasa de Éxito</span>
+        </div>
+      </div>
+
+      <!-- Courses Section Header -->
+      <div class="flex items-center justify-between w-full">
+        <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-lg font-bold text-[#1C1C28]">Mis Cursos</span>
+        <a href="#" class="flex items-center gap-1.5 rounded-full px-4 py-2 bg-[#F07A1A]">
+          <i data-lucide="plus" class="w-3.5 h-3.5 text-white"></i>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[13px] font-semibold text-white">+ Nuevo Curso</span>
+        </a>
+      </div>
+
+      <!-- Courses Grid Row 1 -->
+      <div class="flex gap-4 w-full">
+        <!-- Course 1 -->
+        <div class="flex-1 flex flex-col rounded-2xl bg-white p-5 border border-[#E5E7EB]" style="box-shadow: 0 1px 3px #0000000D;">
+          <div class="flex items-center justify-between w-full">
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-sm font-semibold text-[#1C1C28]">4° Básico A</span>
+            <i data-lucide="trash-2" class="w-4 h-4 text-[#D1D5DB]"></i>
+          </div>
+          <div class="flex gap-4 pt-3">
+            <div class="flex items-center gap-1"><i data-lucide="users" class="w-3.5 h-3.5 text-[#6B7280]"></i><span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-xs text-[#6B7280]">32 alumnos</span></div>
+            <div class="flex items-center gap-1"><i data-lucide="file-text" class="w-3.5 h-3.5 text-[#6B7280]"></i><span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-xs text-[#6B7280]">4 guías</span></div>
+          </div>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[13px] font-semibold text-[#F07A1A] mt-3">Ver curso →</span>
+        </div>
+        <!-- Course 2 -->
+        <div class="flex-1 flex flex-col rounded-2xl bg-white p-5 border border-[#E5E7EB]" style="box-shadow: 0 1px 3px #0000000D;">
+          <div class="flex items-center justify-between w-full">
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-sm font-semibold text-[#1C1C28]">5° Básico B</span>
+            <i data-lucide="trash-2" class="w-4 h-4 text-[#D1D5DB]"></i>
+          </div>
+          <div class="flex gap-4 pt-3">
+            <div class="flex items-center gap-1"><i data-lucide="users" class="w-3.5 h-3.5 text-[#6B7280]"></i><span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-xs text-[#6B7280]">28 alumnos</span></div>
+            <div class="flex items-center gap-1"><i data-lucide="file-text" class="w-3.5 h-3.5 text-[#6B7280]"></i><span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-xs text-[#6B7280]">3 guías</span></div>
+          </div>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[13px] font-semibold text-[#F07A1A] mt-3">Ver curso →</span>
+        </div>
+        <!-- Course 3 -->
+        <div class="flex-1 flex flex-col rounded-2xl bg-white p-5 border border-[#E5E7EB]" style="box-shadow: 0 1px 3px #0000000D;">
+          <div class="flex items-center justify-between w-full">
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-sm font-semibold text-[#1C1C28]">6° Básico A</span>
+            <i data-lucide="trash-2" class="w-4 h-4 text-[#D1D5DB]"></i>
+          </div>
+          <div class="flex gap-4 pt-3">
+            <div class="flex items-center gap-1"><i data-lucide="users" class="w-3.5 h-3.5 text-[#6B7280]"></i><span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-xs text-[#6B7280]">35 alumnos</span></div>
+            <div class="flex items-center gap-1"><i data-lucide="file-text" class="w-3.5 h-3.5 text-[#6B7280]"></i><span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-xs text-[#6B7280]">5 guías</span></div>
+          </div>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[13px] font-semibold text-[#F07A1A] mt-3">Ver curso →</span>
+        </div>
+      </div>
+
+      <!-- Courses Grid Row 2 -->
+      <div class="flex gap-4 w-full">
+        <!-- Course 4 -->
+        <div class="flex-1 flex flex-col rounded-2xl bg-white p-5 border border-[#E5E7EB]" style="box-shadow: 0 1px 3px #0000000D;">
+          <div class="flex items-center justify-between w-full">
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-sm font-semibold text-[#1C1C28]">3° Medio C</span>
+            <i data-lucide="trash-2" class="w-4 h-4 text-[#D1D5DB]"></i>
+          </div>
+          <div class="flex gap-4 pt-3">
+            <div class="flex items-center gap-1"><i data-lucide="users" class="w-3.5 h-3.5 text-[#6B7280]"></i><span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-xs text-[#6B7280]">40 alumnos</span></div>
+            <div class="flex items-center gap-1"><i data-lucide="file-text" class="w-3.5 h-3.5 text-[#6B7280]"></i><span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-xs text-[#6B7280]">2 guías</span></div>
+          </div>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[13px] font-semibold text-[#F07A1A] mt-3">Ver curso →</span>
+        </div>
+        <!-- Course 5 -->
+        <div class="flex-1 flex flex-col rounded-2xl bg-white p-5 border border-[#E5E7EB]" style="box-shadow: 0 1px 3px #0000000D;">
+          <div class="flex items-center justify-between w-full">
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-sm font-semibold text-[#1C1C28]">7° Básico A</span>
+            <i data-lucide="trash-2" class="w-4 h-4 text-[#D1D5DB]"></i>
+          </div>
+          <div class="flex gap-4 pt-3">
+            <div class="flex items-center gap-1"><i data-lucide="users" class="w-3.5 h-3.5 text-[#6B7280]"></i><span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-xs text-[#6B7280]">30 alumnos</span></div>
+            <div class="flex items-center gap-1"><i data-lucide="file-text" class="w-3.5 h-3.5 text-[#6B7280]"></i><span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-xs text-[#6B7280]">6 guías</span></div>
+          </div>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[13px] font-semibold text-[#F07A1A] mt-3">Ver curso →</span>
+        </div>
+        <!-- Course 6 -->
+        <div class="flex-1 flex flex-col rounded-2xl bg-white p-5 border border-[#E5E7EB]" style="box-shadow: 0 1px 3px #0000000D;">
+          <div class="flex items-center justify-between w-full">
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-sm font-semibold text-[#1C1C28]">8° Básico B</span>
+            <i data-lucide="trash-2" class="w-4 h-4 text-[#D1D5DB]"></i>
+          </div>
+          <div class="flex gap-4 pt-3">
+            <div class="flex items-center gap-1"><i data-lucide="users" class="w-3.5 h-3.5 text-[#6B7280]"></i><span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-xs text-[#6B7280]">25 alumnos</span></div>
+            <div class="flex items-center gap-1"><i data-lucide="file-text" class="w-3.5 h-3.5 text-[#6B7280]"></i><span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-xs text-[#6B7280]">1 guía</span></div>
+          </div>
+          <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[13px] font-semibold text-[#F07A1A] mt-3">Ver curso →</span>
+        </div>
+      </div>
+
+      <!-- Quick Actions Row -->
+      <div class="flex gap-4 w-full">
+        <!-- Card Crear Guía -->
+        <div class="flex-1 flex flex-col gap-4 rounded-2xl bg-white p-6 border border-[#E5E7EB]">
+          <div class="flex flex-col gap-3">
+            <div class="w-11 h-11 rounded-full bg-[#FFF3E8] flex items-center justify-center">
+              <i data-lucide="file-plus" class="w-5 h-5 text-[#F07A1A]"></i>
+            </div>
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-base font-semibold text-[#1C1C28]">Crear nueva guía</span>
+            <p style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[13px] text-[#6B7280]">Genera evaluaciones con IA para tus alumnos</p>
+          </div>
+          <a href="#" class="flex items-center gap-1.5 rounded-full px-6 py-2.5 bg-[#F07A1A] w-fit">
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-sm font-semibold text-white">Crear</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-white"></i>
+          </a>
+        </div>
+        <!-- Card Subir Respuestas -->
+        <div class="flex-1 flex flex-col gap-4 rounded-2xl bg-white p-6 border border-[#E5E7EB]">
+          <div class="flex flex-col gap-3">
+            <div class="w-11 h-11 rounded-full bg-[#EFF6FF] flex items-center justify-center">
+              <i data-lucide="upload" class="w-5 h-5 text-[#3B82F6]"></i>
+            </div>
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-base font-semibold text-[#1C1C28]">Subir respuestas</span>
+            <p style="font-family: 'IBM Plex Sans', sans-serif;" class="text-[13px] text-[#6B7280]">Sube las respuestas de tus alumnos</p>
+          </div>
+          <a href="#" class="flex items-center gap-1.5 rounded-full px-6 py-2.5 border border-[#F07A1A] w-fit">
+            <span style="font-family: 'IBM Plex Sans', sans-serif;" class="text-sm font-semibold text-[#F07A1A]">Subir</span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-[#F07A1A]"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
