@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flyer — Francisco</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #111;
+    }
+    .flyer {
+      width: 1080px;
+      height: 1080px;
+      background: #000000;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Gradient blobs */
+    .blob1 {
+      position: absolute;
+      top: -120px;
+      left: -100px;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #4F46E540 0%, transparent 70%);
+    }
+    .blob2 {
+      position: absolute;
+      bottom: -150px;
+      right: -80px;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #06B6D430 0%, transparent 70%);
+    }
+    .blob3 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #7C3AED20 0%, transparent 70%);
+    }
+
+    /* Grid subtle background */
+    .grid-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* Border glow frame */
+    .border-frame {
+      position: absolute;
+      inset: 24px;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 24px;
+    }
+
+    /* Content */
+    .content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0;
+      padding: 60px;
+    }
+
+    /* Logo */
+    .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4F46E5, #06B6D4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 48px;
+    }
+    .logo span {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* Eyebrow */
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .eyebrow-line {
+      width: 40px;
+      height: 3px;
+      background: linear-gradient(90deg, #4F46E5, #06B6D4);
+      border-radius: 1px;
+    }
+    .eyebrow-text {
+      font-family: 'Geist Mono', monospace;
+      font-size: 18px;
+      color: #71717A;
+      letter-spacing: 1.5px;
+    }
+
+    /* Headline */
+    .headline {
+      font-family: 'Instrument Serif', serif;
+      font-size: 100px;
+      line-height: 1.1;
+      color: #E4E4E7;
+      letter-spacing: -2.5px;
+      margin-bottom: 8px;
+    }
+    .headline-accent {
+      font-family: 'Instrument Serif', serif;
+      font-size: 100px;
+      line-height: 1.1;
+      letter-spacing: -2.5px;
+      background: linear-gradient(90deg, #4F46E5, #7C3AED, #06B6D4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 40px;
+    }
+
+    /* Info */
+    .info-text {
+      font-family: 'Geist', sans-serif;
+      font-size: 28px;
+      color: #A1A1AA;
+      line-height: 1.6;
+      max-width: 800px;
+      margin-bottom: 48px;
+    }
+
+    /* Price badge */
+    .price-badge {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 40px;
+      border-radius: 9999px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(10,10,10,0.8);
+      margin-bottom: 48px;
+    }
+    .price-label {
+      font-family: 'Geist', sans-serif;
+      font-size: 22px;
+      color: #71717A;
+    }
+    .price-value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #4F46E5, #06B6D4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* CTA */
+    .cta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 48px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #4F46E5, #06B6D4);
+      margin-bottom: 24px;
+    }
+    .cta-text {
+      font-family: 'Geist', sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .cta-icon {
+      font-size: 24px;
+      color: #fff;
+    }
+
+    /* Phone */
+    .phone {
+      font-family: 'Geist Mono', monospace;
+      font-size: 28px;
+      color: #71717A;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+
+    /* Link */
+    .link {
+      font-family: 'Geist Mono', monospace;
+      font-size: 24px;
+      letter-spacing: 0.5px;
+      background: linear-gradient(90deg, #4F46E5, #06B6D4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Corner dots */
+    .dot {
+      position: absolute;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="flyer">
+  <!-- Background effects -->
+  <div class="blob1"></div>
+  <div class="blob2"></div>
+  <div class="blob3"></div>
+  <div class="grid-bg"></div>
+  <div class="border-frame"></div>
+
+  <!-- Decorative dots -->
+  <div class="dot" style="width: 4px; height: 4px; background: #6366F150; top: 200px; left: 150px;"></div>
+  <div class="dot" style="width: 3px; height: 3px; background: #8B5CF640; top: 350px; right: 200px;"></div>
+  <div class="dot" style="width: 5px; height: 5px; background: #D946EF30; bottom: 280px; left: 300px;"></div>
+  <div class="dot" style="width: 3px; height: 3px; background: #06B6D440; top: 180px; right: 350px;"></div>
+  <div class="dot" style="width: 4px; height: 4px; background: #6366F140; bottom: 200px; right: 250px;"></div>
+
+  <!-- Content -->
+  <div class="content">
+    <!-- Logo -->
+    <div class="logo">
+      <span>F.</span>
+    </div>
+
+    <!-- Eyebrow -->
+    <div class="eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Diseño Web Profesional</span>
+      <div class="eyebrow-line"></div>
+    </div>
+
+    <!-- Headline -->
+    <div class="headline">Diseño tu página</div>
+    <div class="headline-accent">web a medida.</div>
+
+    <!-- Info -->
+    <p class="info-text">
+      Estudiante de último año de Ingeniería Civil Informática — USM<br>
+      Francisco González
+    </p>
+
+    <!-- Price -->
+    <div class="price-badge">
+      <span class="price-label">Páginas desde</span>
+      <span class="price-value">$100.000 CLP</span>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <span class="cta-icon">💬</span>
+      <span class="cta-text">Escríbeme por WhatsApp</span>
+    </div>
+
+    <!-- Phone -->
+    <span class="phone">+56 9 9886 4049</span>
+
+    <!-- Link -->
+    <span class="link">frangtdev.netlify.app</span>
+  </div>
+</div>
+
+</body>
+</html>
